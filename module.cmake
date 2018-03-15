@@ -1,0 +1,6 @@
+message(STATUS "Loading cmake module: Vulkan")
+include(${CMAKE_MODULE_VULKAN_DIR}/FindVulkan.cmake)
+if(NOT DEFINED AURORAFW_IS_BUILDING)
+	find_package(Vulkan)
+endif()
+install(FILES ${CMAKE_MODULE_VULKAN_DIR}/FindVulkan.cmake DESTINATION share/cmake/Vulkan )
